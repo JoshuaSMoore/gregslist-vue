@@ -1,5 +1,5 @@
 export const dev = window.location.origin.includes('localhost')
 export const baseURL = dev ? 'http://localhost:3000' : ''
-export const domain = 'demodays.us.auth0.com'
-export const audience = 'https://student-auth.com'
-export const clientId = 'sPPms5w1gGrBv5T6hY9vj1xZWwT7HoCj'
+export const domain = 'jmoore07.us.auth0.com'
+export const audience = 'https://studentauth.co'
+export const clientId = 'mm6F2SzDZrPMB9IipadiK2od6OXoO2NX'
