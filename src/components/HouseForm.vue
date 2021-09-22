@@ -2,11 +2,17 @@
   <form @submit.prevent="handleSubmit">
     <div class="form-group">
       <label for="levels" class="">Levels:</label>
-      <input type="number" class="form-control" name="levels" id="levels" required>
+      <input v-model="editable.levels"
+             type="number"
+             class="form-control"
+             name="levels"
+             id="levels"
+      >
     </div>
     <div class="form-group">
       <label for="price" class="">Price:</label>
-      <input type="number"
+      <input v-model="editable.price"
+             type="number"
              class="form-control"
              name="price"
              id="price"
@@ -16,30 +22,46 @@
     </div>
     <div class="form-group">
       <label for="bedrooms" class="">Bedrooms:</label>
-      <input type="rooms" class="form-control" name="bedrooms" id="bedrooms">
+      <input v-model="editable.bedrooms" type="rooms" class="form-control" name="bedrooms" id="bedrooms">
     </div>
     <div class="form-group">
       <label for="bathrooms" class="">Bathrooms:</label>
-      <input type="bathrooms" class="form-control" name="bathrooms" id="bathrooms">
+      <input v-model="editable.bathrooms" type="bathrooms" class="form-control" name="bathrooms" id="bathrooms">
     </div>
     <div class="form-group">
       <label for="year" class="">year built:</label>
-      <input type="year" class="form-control" name="year" id="year">
+      <input v-model="editable.year" type="year" class="form-control" name="year" id="year">
     </div>
     <div class="form-group">
       <label for="description" class="">description:</label>
-      <textarea type="text" class="form-control" name="description" id="description" rows="5"></textarea>
+      <textarea v-model="editable.description"
+                type="text"
+                class="form-control"
+                name="description"
+                id="description"
+                rows="5"
+      ></textarea>
     </div>
     <div class="form-group">
       <label for="img" class="">img:</label>
-      <input type="url" class="form-control" name="img" id="img" required>
+      <input v-model="editable.imgUrl"
+             type="url"
+             class="form-control"
+             name="img"
+             id="img"
+             required
+      >
     </div>
-    <div class="button-group my-3">
-      <button type="reset" class="btn btn-secondary">
-        clear
+    <div class="d-flex justify-content-between my-3">
+      <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn text-dark lighten-20 text-uppercase selectable">
+        <b>
+          cancel
+        </b>
       </button>
-      <button type="submit" class="btn btn-primary">
-        submit
+      <button type="submit" class="btn text-primary text-uppercase selectable">
+        <b>
+          submit
+        </b>
       </button>
     </div>
   </form>

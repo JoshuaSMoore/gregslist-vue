@@ -51,7 +51,7 @@
     </div>
     <div class="form-group">
       <label for="img" class="">img:</label>
-      <input v-model="editable.img"
+      <input v-model="editable.imgUrl"
              type="url"
              class="form-control"
              name="img"

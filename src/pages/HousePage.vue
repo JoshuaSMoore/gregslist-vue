@@ -63,7 +63,7 @@ export default {
     })
     return {
       account: computed(() => AppState.account),
-      car: computed(() => AppState.house),
+      house: computed(() => AppState.house),
       async remove(house) {
         try {
           const yes = await Pop.confirm('are you really sure?')
